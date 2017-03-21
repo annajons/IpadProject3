@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+      <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+      <script src="script.js"></script>
+        <title>Book a table</title>
+        <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+<body>
+  <div class="cont">
+      <img src="img/logo.png" width="214px" height="212px"/>
+      <div id="home" class="screen" Style="display: block">
+        <h1>Welcome!</h1>
+        <button onclick="switchpage('home', 'here')" class="btn" type="button">Let us know you're here</button>
+        <button onclick="switchpage('home', 'book')" class="btn" type="button">Book a table</button>
+      </div>
+
+      <div id="here" class="screen">
+        <h2>Find your booking</h2>
+        <input class="search" type="text" name="search" placeholder="  Type in your name">
+        <button onclick="modal('modal', 0)" class="btn4" type="button">Submit</button>
+        <button onclick="switchpage('here', 'home')" class="btn3" type="button">Back</button>
+      </div>
+      <div id="book" class="screen" >
+        <h3>Enter your information</h3>
+        <input class="search" type="text" name="search" placeholder="  Name">
+        <input class="search" type="text" name="search" placeholder="  Phone Number">
+        <input class="search" type="text" name="search" placeholder="  How many people?">
+        <input class="search" type="text" name="search" placeholder="  Date">
+        <input class="search" type="text" name="search" placeholder="  Any special requirments?">
+        <button onclick="modal('modal', 0)" class="btn4" type="button">Submit</button>
+        <button onclick="switchpage('book', 'home')" class="btn3" type="button">Back</button>
+      </div>
+    </div>
+      <button onclick="modal('modal2', 0)"class="btn2" type="button">Call a waiter</button>
+      <!-- Modals -->
+      <div id="shadow"></div>
+      <div>
+        <div id="modal" class="modal">
+        <h2>Your table will be ready in 10 Minutes</h2>
+        <p>Would you like to recive a text message when your table is ready?</p>
+        <button onclick="modal('modal', 1)" class="btn5" type="button">Yes please</button>
+        <button onclick="modal('modal', 1)" class="btn5" type="button">No thank you</button>
+      </div>
+
+      <div id="modal2" class="modal">
+        <h2>A waiter will be with you in just a few minutes</h2>
+        <button onclick="modal('modal2', 1)" class="btn3" type="button">Back</button>
+      </div>
+
+    </body>
+</html>
